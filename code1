@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <conio.h>
+
+
+void main()
+{
+    int a[3][3];
+    int b[3][3];
+    int i;
+    int j;
+    printf("MATRICE 1\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("ENTER NUMBER \n");
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("MATRICE 2\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("ENTER NUMBER \n");
+            scanf("%d",&b[i][j]);
+        }
+    }
+    
+    
+     printf("MATRICE 1\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("%d ",a[i][j]);
+            
+        }
+        printf("\n");
+    }
+    
+     printf("MATRICE 2\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("%d ",b[i][j]);
+            
+        }
+        printf("\n");
+    }
+    
+}
