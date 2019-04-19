@@ -1,0 +1,110 @@
+#include <stdio.h>
+#include <conio.h>
+
+
+void main()
+{
+    int r1;
+    int c1;
+    int r2;
+    int c2;
+    int r3;
+    int c3;
+    int i;
+    int j;
+    int p;
+    int q;
+    int out=0;
+    int k=0;
+    while(k==0)
+    {
+        printf("ENTER ROWS AND COLUMNS for MATRIX 1\n");
+        scanf("%d %d",&r1,&c1);
+        printf("ENTER ROWS AND COLUMNS for MATRIX 2\n");
+        scanf("%d %d",&r2,&c2);
+        r3=r1;
+        c3=c2;
+        if(c1==r2)
+        {
+            k=1;
+        }
+        else
+        {
+            printf("Number of columns in first matrix and number of rows in second should be equal\n")
+        }
+    
+    }
+    
+    
+    
+   
+        printf("MATRICE 1\n");
+    int a[r1][c1];
+    int b[r2][c2];
+    int c[r3][c3];
+    
+    for(i=0;i<r1;i++)
+    {
+        for(j=0;j<c1;j++)
+        {
+            printf("ENTER NUMBER \n");
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("MATRICE 2\n");
+    for(i=0;i<r2;i++)
+    {
+        for(j=0;j<c2;j++)
+        {
+            printf("ENTER NUMBER \n");
+            scanf("%d",&b[i][j]);
+        }
+    }
+    
+    
+     printf("MATRICE 1\n");
+    for(i=0;i<r1;i++)
+    {
+        for(j=0;j<c1;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("MATRICE 2\n");
+    for(i=0;i<r2;i++)
+    {
+        for(j=0;j<c2;j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("ON MULTIPLICATION\n");
+   
+    for(i=0;i<r3;i++)
+    {
+        for(j=0;j<c3;j++) //ADDRESS OF OUTPUT
+        {
+           for(p=0;p<c1;p++)//p is columns of the row i
+           {
+              out=out+a[i][p]*b[p][j];
+           }
+           c[i][j]=out;
+           out=0;
+        }
+        printf("\n");
+        
+    }
+    
+    for(i=0;i<r3;i++)
+    {
+        for(j=0;j<c3;j++)
+        {
+            printf("%d ",c[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
